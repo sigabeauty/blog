@@ -1,0 +1,22 @@
+  <meta charset="UTF-8">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💡</text></svg>">
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const input = document.getElementById("search-input");
+  input.addEventListener("input", function() {
+    const query = this.value.toLowerCase();
+    const articles = document.querySelectorAll("main ul li a");
+    articles.forEach(a => {
+      const text = a.textContent.toLowerCase();
+      if (text.includes(query)) {
+        a.parentElement.style.display = "";
+      } else {
+        a.parentElement.style.display = "none";
+      }
+    });
+  });
+});
+</script>
