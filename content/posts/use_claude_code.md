@@ -49,4 +49,4 @@ start using command **claude**
 
 And now you can get the claude code, and start your vibe coding career!
 
-![claude-code-image](https://github.com/anthropics/claude-code/blob/main/demo.gif?raw=true){: style="max-width: 600px;"}
+![claude-code](https://github.com/anthropics/claude-code/blob/main/demo.gif?raw=true)
