@@ -38,7 +38,7 @@ sudo npm install -g @anthropic-ai/claude-code
 claude --version # check version
 ```
 
-## Set 3-part API
+## Set 3rd-part API
 You can use any other LLM service you want, here is an example of using kimi API.
 ```
 export ANTHROPIC_BASE_URL="https://api.moonshot.cn/anthropic/"
