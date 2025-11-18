@@ -1,6 +1,7 @@
 ---
 title: "Review of Voice Activity Detection"
 date: 2025-10-28
+math: true
 categories: ["tech"]
 tags: ["vad", "speech"]
 ---
@@ -8,13 +9,12 @@ tags: ["vad", "speech"]
 In speech signal processing, auto speech recognition (ASR) is much well known than voice activity detection (VAD), because VAD a sub modual but not a full-application directly facing user interface. Indeed, VAD is very important in any production of speech data pre-processing.
 
 ## Task Definition
-Voice activity detection is the task of looking for voice activity in an audio stream. Basically, it should tell speech apart from noise and silence. Given input audio feature X, the task of VAD is the predict Y, each Y_i is the probability of speech or noise/silence in current time. Here, the definition of X and Y is generalized in terms of time granularity(Can represent both audio chunk, frame, etc).
+Voice activity detection is the task of looking for voice activity in an audio stream. Basically, it should tell speech apart from noise and silence. Given input audio feature $X = [x_1, x_2, ..., x_T]$, the task of VAD is the predict $Y = [y_1, y_2, ..., y_T]$, each $y_i$ is the probability of speech or noise/silence in current time. Here, the definition of $X$ and $Y$ is generalized in terms of time granularity(Can represent both audio chunk, frame, etc). 
 
 Based on the definition. Oh! This task seems easy enough, just a binary classification problem. But, a modern VAD should satisfy some main criteria
-
-- High quality: Enough high precision and recall, maybe separately consider in different situations.
-- Low user perceived latency: It’s only a pre-processing step, important but cannot affect the whole pipeline latency.
-- Generalization: Robustness for all domains, audio sources, noise, quality, and SNR levels
+- **High quality**: Enough high precision and recall, maybe separately consider in different situations.
+- **Low user perceived latency**: It's only a pre-processing step, important but cannot affect the whole pipeline latency.
+- **Generalization**: Robustness for all domains, audio sources, noise, quality, and SNR levels
    
 ## Related Works
    

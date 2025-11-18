@@ -6,6 +6,7 @@
 <body>
   <header>
   {{ partial "nav.html" . }}
+  {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
   </header>
 
   <main>
