@@ -123,3 +123,111 @@ p img {
   display: block;
   margin: 1em auto;
 }
+
+/* ====== Code ====== */
+main code {
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 0.88em;
+  background: #f0f0f0;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+main pre {
+  background: #f6f6f6 !important;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin: 1.2em 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+/* .highlight wrapper: reset so only <pre> shows the box */
+main .highlight {
+  background: none !important;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+main pre code,
+main .highlight code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  color: #222;
+}
+
+/* Override Hugo Chroma monokai inline token colors for light mode */
+main .highlight span[style*="color:#f8f8f2"] { color: #222 !important; }
+main .highlight span[style*="color:#272822"] { color: #222 !important; }
+main .highlight span[style*="color:#75715e"] { color: #999 !important; }
+main .highlight span[style*="color:#66d9ef"] { color: #0366d6 !important; }
+main .highlight span[style*="color:#a6e22e"] { color: #2e7d32 !important; }
+main .highlight span[style*="color:#ae81ff"] { color: #6a1b9a !important; }
+main .highlight span[style*="color:#f92672"] { color: #c62828 !important; }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  main code {
+    background: #1e1e1e;
+  }
+  main pre {
+    background: #1a1a1a !important;
+    border-color: #2a2a2a;
+  }
+  main pre code,
+  main .highlight code {
+    color: #e0e0e0;
+  }
+  main .highlight span[style*="color:#f8f8f2"] { color: #e0e0e0 !important; }
+  main .highlight span[style*="color:#272822"] { color: #e0e0e0 !important; }
+  main .highlight span[style*="color:#75715e"] { color: #666 !important; }
+  main .highlight span[style*="color:#66d9ef"] { color: #58a6ff !important; }
+  main .highlight span[style*="color:#a6e22e"] { color: #7ee787 !important; }
+  main .highlight span[style*="color:#ae81ff"] { color: #d2a8ff !important; }
+  main .highlight span[style*="color:#f92672"] { color: #ff7b72 !important; }
+}
+
+/* ====== Table ====== */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+main th,
+main td {
+  border: 1px solid #ddd;
+  padding: 0.5em 0.75em;
+  text-align: left;
+  vertical-align: top;
+}
+main th {
+  background: #f7f7f7;
+  font-weight: 600;
+}
+main tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  main table {
+    border-color: #333;
+  }
+  main th {
+    background: #1a1a1a;
+  }
+  main td,
+  main tr:nth-child(even) td {
+    border-color: #333;
+    background: transparent;
+  }
+  main tr:nth-child(even) td {
+    background: #1a1a1a;
+  }
+}
