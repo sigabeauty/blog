@@ -42,17 +42,27 @@ h1, h2, h3 {
 
 /* ====== Navigation ====== */
 nav {
-  text-align: center;
   margin-bottom: 1.5em;
   font-size: 0.95rem;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0.6em 0;
+  border-bottom: 1px solid #e8e8e8;
 }
 nav a {
   text-decoration: none;
   color: #0366d6;
-  margin: 0 0.6em;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 nav a:hover {
-  text-decoration: underline;
+  background: rgba(3, 102, 214, 0.08);
 }
 
 /* ====== Links (never purple) ====== */
@@ -123,8 +133,18 @@ hr {
 }
 
 #search-input {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  padding: 0.3em 0.7em;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#search-input:focus {
+  border-color: #0366d6;
+}
+.nav-inner form {
+  margin-left: 0.8em;
 }
 
 /* 底部版权信息 */
