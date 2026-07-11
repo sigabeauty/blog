@@ -1,7 +1,6 @@
 ---
 date: '2025-04-02T03:19:34+08:00'
 title: 'From DeepSeek V3 to R1 and Practical of Building Reasoning based Applications'
-draft: true
 math: true
 categories: ["AI"]
 tags: ["LLM"]

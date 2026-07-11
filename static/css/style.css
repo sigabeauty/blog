@@ -100,6 +100,28 @@ hr {
   hr { border-top-color: #333; }
 }
 
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  body > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  main code {
+    font-size: 0.82rem;
+  }
+  main pre {
+    font-size: 0.82rem;
+    padding: 0.8em 0.9em;
+  }
+}
+
 #search-input {
   border: 1px solid #ccc;
   border-radius: 4px;
