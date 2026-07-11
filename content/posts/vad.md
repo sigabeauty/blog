@@ -1,6 +1,6 @@
 ---
 title: "Review of Voice Activity Detection"
-date: 2025-10-28
+date: 2023-02-28
 math: true
 categories: ["tech"]
 tags: ["vad", "speech"]
